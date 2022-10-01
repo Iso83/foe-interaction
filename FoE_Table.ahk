@@ -474,8 +474,10 @@ Rect_Bnt_OpenWorld_Select(x, y, winW, winH, wordID) ;checked
 
 	if(wordID < 4)
 		Y1:=342
-	else
+	else if(wordID < 7)
 		Y1:=394
+	else
+		Y1:=446
 
 	X2:=X1+143
 	Y2:=Y1+37

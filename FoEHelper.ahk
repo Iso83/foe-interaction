@@ -13,6 +13,7 @@ Visit_Worlds(onlyFriends:=false)
 	friends_D:=144
 	friends_E:=144
 	friends_F:=144
+	friends_G:=144
 
 
 	if(onlyFriends)
@@ -23,6 +24,7 @@ Visit_Worlds(onlyFriends:=false)
 		Run_MO_Full(4, 0, 0, friends_D)
 		Run_MO_Full(5, 0, 0, friends_E)
 		Run_MO_Full(6, 0, 0, friends_F)
+		Run_MO_Full(7, 0, 0, friends_G)
 	}
 	else
 	{
@@ -32,6 +34,7 @@ Visit_Worlds(onlyFriends:=false)
 		Run_MO_Full(4,,, friends_D)
 		Run_MO_Full(5,,, friends_E)
 		Run_MO_Full(6,,, friends_F)
+		Run_MO_Full(7,,, friends_G)
 	}
 }
 
@@ -66,10 +69,10 @@ return
 ^o::
 {
 	worldID:=1
-	while(worldID < 7)
+	while(worldID < 8)
 	{
 		Chrome_OpenFoE(worldID)
-		Sleep, 2500
+		Sleep, 3800
 
 		WinGetPos, X, Y, WinW, WinH, A
 
