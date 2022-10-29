@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FoE-AutoNegotation
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  auto fill negotation suggestions from foe-helper in.
 // @homepageURL  https://bitbucket.org/iso83/foe-interaction/src/master/
 // @author       Iso
@@ -67,5 +67,7 @@ function fillGuessesSuggestions()
         FoEproxy.addHandler('NegotiationGameService', 'submitTurn', (data, postData) => {
             setTimeout(() => fillGuessesSuggestions(), 2000);
         });
+
+        Negotiation.CONST_Context_GBG = 'bugt';
     }, 2000);
 })();
