@@ -283,11 +283,11 @@ MyTest(id)
 }
 
 ^Numpad1::
-	MyTest(1)
+	Attack()
 Return
 
 ^Numpad2::
-	MyTest(2)
+	Reload()
 Return
 
 ^Numpad3::
@@ -319,16 +319,18 @@ Reload()
 	Click_Speed(Rect_ArmySelectedBox(X, Y, WinW, WinH, 0), mouseSpeed, offset_Bnt, 0)
 
 	; Select 3 hovers
-	Click_Speed(Rect_ArmySelectionTab(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, 0)
+	Click_Speed(Rect_ArmySelectionTab(X, Y, WinW, WinH, 4), mouseSpeed, offset_Bnt, 0)
+	
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
 
+
 	; Select 5 agents
 	Click_Speed(Rect_ArmySelectionTab(X, Y, WinW, WinH, 3), mouseSpeed, offset_Bnt, 0)
-	; scrollLoc:=20 ; B-wereld
-	scrollLoc:=33 ; F-wereld
+	scrollLoc:=48 
 	Click_Speed(Rect_ArmySelectionScrollH(X, Y, WinW, WinH, 0), mouseSpeed, { xOffset:576-(576/100*scrollLoc)+18, yOffset:7 }, 0)
+	
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
 	Click_Speed(Rect_ArmySelectionBox(X, Y, WinW, WinH, 2), mouseSpeed, offset_Bnt, speed)
