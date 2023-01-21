@@ -8,5 +8,6 @@
  - *FoEHelper*, requires some adjusting (I play on all 7 nl-worlds).
 > - ctrl+f: visit friends mo & taverne.
 > - ctrl+o: login on all worlds
-> - numlock-1/mouse-x1: army attack (& OK on annoying windows)
-> - numlock-2/mouse-x2: reload army
+> - ctrl+numlock-1/mouse-x1: army attack (& OK on annoying windows)
+> - ctrl+numlock-2/mouse-x2: reload army
+> - ctrl+t: repeat x time placing current order.
