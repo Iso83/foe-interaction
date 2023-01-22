@@ -4,6 +4,8 @@
 // @version      1.0
 // @description  auto fill negotation suggestions from foe-helper in.
 // @homepageURL  https://bitbucket.org/iso83/foe-interaction/src/master/
+// @updateURL    https://github.com/Iso83/foe-interaction/raw/master/tm/FoE-AutoNegotation.user.js
+// @downloadURL  https://github.com/Iso83/foe-interaction/raw/master/tm/FoE-AutoNegotation.user.js
 // @author       Iso
 // @match        https://*.forgeofempires.com/game/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
@@ -40,15 +42,15 @@ function fillGuessesSuggestions() {
 
 	const nextRoundSuggestion = GuessesSuggestions[Guesses.length];
 	if (nextRoundSuggestion) {
-		let t = 200;
+		let t = 250;
 
 		for (let place = 0; place < Negotiation.PlaceCount; place++) {
 			const slotSugestion = nextRoundSuggestion[place];
 			if (slotSugestion) {
 				setTimeout(() => simulateKey(97 + place), t);
-				t += 150;
-				setTimeout(() => simulateKey(97 + (slotSugestion.id % 10)), t);
 				t += 200;
+				setTimeout(() => simulateKey(97 + (slotSugestion.id % 10)), t);
+				t += 250;
 			}
 		}
 	}
@@ -74,5 +76,5 @@ function fillGuessesSuggestions() {
 		);
 
 		Negotiation.CONST_Context_GBG = "bugt"; // show helper in GBG
-	}, 3000);
+	}, 5000);
 })();
